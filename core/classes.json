@@ -1,0 +1,4 @@
+{
+    "client":"clients/clients-class.php",
+    "interface":"clients/home-class.php"
+}
