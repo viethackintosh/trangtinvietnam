@@ -29,12 +29,14 @@ if (! class_exists('autoloadcore')) {
 			if (! file_exists($classJson)) return;
 			$_classes = json_decode(file_get_contents($classJson),true);      
 			
-			foreach ($_classes as $key => $isfile) {				
-				if ( file_exists($core. '/' . $isfile) ) {   
-					require_once($core . '/' . $isfile);  					
+			foreach ($_classes as $key => $isfile) {	
+				//echo 	$core.  $isfile . '<br/>';		
+				if ( file_exists($core.  $isfile) ) {   
+					require_once($core .  $isfile);  					
 						$files = explode('/',$isfile);
 						$file =$files[count($files)-1];
-						$initclass = str_replace('-','',str_replace('.php','',$file));   
+						$initclass = str_replace('-','',str_replace('.php','',$file)); 
+						//echo $initclass . '<br/>';  
 						if (function_exists($initclass)) $initclass();
 					}
 											

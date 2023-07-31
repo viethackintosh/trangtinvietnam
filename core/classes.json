@@ -1,4 +1,5 @@
 {
+    "post-route":"clients/post-route-class.php",
     "client":"clients/clients-class.php",
-    "interface":"clients/home-class.php"
+    "indexpage":"clients/layout/index-class.php"
 }

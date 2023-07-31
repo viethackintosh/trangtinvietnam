@@ -34,6 +34,5 @@
 ehthumbs.db
 Thumbs.db
 .sass-cache
-modules
 .gitignore
-coding
+dev

@@ -60,12 +60,12 @@ $lastUpdateFile = lastUpdateFile(__DIR__ ,''); //đường dẫn đến file đ�
 $fileInfo = pathinfo($lastUpdateFile); // lấy thông tin của file
 $targetDir =  $fileInfo['dirname']; // thư mục chứa file thay đổi sau cùng
 $ext = $fileInfo['extension']; // lấy phần mở rộng của file thay đổi sau cùng
-$rebuildDir = str_replace('coding/', '', $targetDir);
+$rebuildDir = str_replace('dev/', '', $targetDir);
 if (! is_dir($rebuildDir)) mkdir($rebuildDir,0755, true);
 
 if (strpos(COMPLIER, $ext) !== false) {     
       if ($ext == 'scss') {            
-            $origin = __DIR__ .'/coding/assets/scss/app.scss';
+            $origin = __DIR__ .'/dev/assets/scss/app.scss';
             $link = __DIR__ . '/assets/scss/app.min.css';       
             echo 'Biên dịch file '. $origin;    
             $sassRs = shell_exec('sass '.$origin .' ' . $link ); 
@@ -85,6 +85,7 @@ if (strpos(COMPLIER, $ext) !== false) {
 
 //$output = shell_exec('rsync -avzhe ssh --progress --delete --exclude-from=exclude.txt  --chown=www-data:www-data --perms --chmod=Du=rwx,Dgo=rx,Fu=rw,Fog=r ' .__DIR__. '/  root@45.32.123.235:/home/nginx/sites/indepgiasi/blog/wp-content/plugins/tinsinhphuc/');
 //echo $output;
+
 /**
  * git init
  * git add .

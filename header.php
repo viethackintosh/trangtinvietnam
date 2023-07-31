@@ -9,6 +9,6 @@
 </head>
 <body>
     <header class='header' id='header'>
-        header here render by js
+        <!-- header here render by js -->
     </header>
     <main class='main' id='main'>  
